@@ -8,7 +8,9 @@ fi
 if [[ -z "${TARGET_REPO}" ]]; then
     TARGET_REPO=lisy09/minio
 fi
-ORIGIN_IMAGE=minio/minio
+if [[ -z "${ORIGIN_IMAGE}" ]]; then
+    ORIGIN_IMAGE=minio/minio
+fi
 
 TARGET_REPO=$TARGET_REPO \
     VERSION=$VERSION \
